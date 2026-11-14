@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Daily Tasks</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <p class="tag">MY PRODUCTIVITY SPACE</p>
+            <h1>Stay Organized.</h1>
+            <p class="subtitle">
+                Plan your day, one task at a time.
+            </p>
+        </header>
+        <section class="stats">
+            <div class="stat-card">
+                <h2 id="totalCount">0</h2>
+                <p>Total Tasks</p>
+            </div>
+            <div class="stat-card">
+                <h2 id="activeCount">0</h2>
+                <p>Active</p>
+            </div>
+
+            <div class="stat-card">
+                <h2 id="doneCount">0</h2>
+                <p>Completed</p>
+            </div>
+        </section>
+
+        <main class="task-box">
+
+            <h2>Today's Tasks</h2>
+
+            <form id="form">
+                <input
+                    type="text"
+                    id="text"
+                    placeholder="What needs to be done?"
+                    autocomplete="off"
+                >
+                <button type="submit" class="add-btn">
+                    + Add Task
+                </button>
+            </form>
+
+            <div class="filters">
+                <button type="button" class="filter active"
+                    data-filter="all">All</button>
+
+                <button type="button" class="filter"
+                    data-filter="active">Active</button>
+
+                <button type="button" class="filter"
+                    data-filter="done">Done</button>
+            </div>
+
+            <ul id="list"></ul>
+
+            <div class="bottom">
+                <p id="count">0 tasks left</p>
+
+                <button type="button" id="clearBtn">
+                    Clear Completed
+                </button>
+            </div>
+
+        </main>
+
+        <footer>
+            <p>Made with focus and consistency.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
